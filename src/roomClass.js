@@ -1,11 +1,12 @@
 class room  {
-    constructor(length, height, x,y, roomCount) {
+    constructor(x,y, roomNum) {
         this.neighbors = [false,false,false,false] // north,south, eas,west
         this.x = x
         this.y = y
+        this.roomNum = roomNum
     }
 
-    addNeighbor(x,y){
-        this.neighbors.push([x,y])
+    addNeighbor(x,y,direction){
+        this.neighbors [direction] = true
     }
 }

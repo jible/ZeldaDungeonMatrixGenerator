@@ -37,18 +37,35 @@ class dungeon  {
                 if (! roomCount < maxRooms + 1){
                     break
                 }
-                giveNeighbors()
+                giveNeighbors(previousRooms[i][0],previousRooms[i][1])
 
             }
         }
     }
 
     giveNeighbors(x,y){
+        let roomsAdded = 0
+        let chance = 1
+        let tryDirection
+        while (true){
+            tryDirection = Math.floor(Math.randomRange(0,3))
+            if (tryDirection == 0){
+                // look up. if the coord above isn't out of range and it isn't populated, populate it
+                if ( y >= 0  && this.matrix[x][y] == null){
+                    this.populateRoom(x,y, roomsAdded)
+                    roomsAdded++
+                }
 
+            }
+
+        }
+        
+        
     }
 
 
-    populateRoom(){
+    populateRoom(x,y,roomCount){
+        this.matrix[x][y] = new room()
 
     }
 
