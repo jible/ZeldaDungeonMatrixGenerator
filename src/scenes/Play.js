@@ -4,7 +4,6 @@ class Play extends Phaser.Scene {
     }
 
     create() {
-        console.log('zeroth one')
         let attempt = new Dungeon(15,15,8, 0, 20)
         attempt.printMatrix()
     }

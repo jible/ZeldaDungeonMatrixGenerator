@@ -15,7 +15,6 @@ class Dungeon {
     }
 
     makeDungeon() {
-        console.log("wow. first one");
         for (let x = 0; x < this.width; x++) {
             this.matrix[x] = [];
             for (let y = 0; y < this.height; y++) {
